@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgs4ryqa52mgk"]
+
+[ext_resource type="Texture2D" uid="uid://c5e1b3v5e14s1" path="res://Sprite/Shun_Qi_Zi_Ran/UI_Flat_IconArrow01a.png" id="1_ttj2x"]
+[ext_resource type="Script" path="res://Script/backbutton.gd" id="2_b6en2"]
+
+[node name="Backbutton" type="TextureButton"]
+texture_filter = 1
+offset_right = 16.0
+offset_bottom = 12.0
+scale = Vector2(2, 2)
+size_flags_horizontal = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("1_ttj2x")
+stretch_mode = 0
+flip_h = true
+script = ExtResource("2_b6en2")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

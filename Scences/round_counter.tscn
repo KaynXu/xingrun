@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://rrudykx7mr6p"]
+
+[ext_resource type="Texture2D" uid="uid://bdy7a57dklfyh" path="res://Sprite/LingBoWeiBu/UI_Flat_Bar01a.png" id="1_lq5f6"]
+[ext_resource type="FontFile" uid="uid://c5ugy4bgmo7mu" path="res://Font/ThaleahFat.ttf" id="1_thxu7"]
+[ext_resource type="Script" path="res://Script/round_counter.gd" id="2_qag5e"]
+
+[node name="RoundCounter" type="TextureRect"]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("1_lq5f6")
+script = ExtResource("2_qag5e")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -11.3333
+offset_top = -11.0
+offset_right = 12.6667
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.315, 0.315)
+pivot_offset = Vector2(28, 15)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_thxu7")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1

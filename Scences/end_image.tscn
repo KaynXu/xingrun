@@ -1,0 +1,136 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpji8grjpjpiw"]
+
+[ext_resource type="Script" path="res://Script/end_image.gd" id="1_2voll"]
+[ext_resource type="Texture2D" uid="uid://dbf0qxj5kkde7" path="res://Sprite/PingFenQiuSe/UI_Flat_Frame02a.png" id="1_6adfg"]
+[ext_resource type="FontFile" uid="uid://ccmyoxpasiioa" path="res://Sprite/PingFenQiuSe/shanhaihongruibangshuw.ttf" id="2_l6bg5"]
+[ext_resource type="Texture2D" uid="uid://dvndw666a8rio" path="res://Sprite/PingFenQiuSe/00.png" id="3_gujen"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlc2l"]
+atlas = ExtResource("3_gujen")
+region = Rect2(144, 16, 32, 16)
+
+[node name="EndImage" type="CanvasLayer"]
+script = ExtResource("1_2voll")
+
+[node name="Lose" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -238.0
+offset_top = -20.0
+offset_right = 236.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6adfg")
+
+[node name="Label" type="Label" parent="Lose"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -207.0
+offset_top = 27.0
+offset_right = 213.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_l6bg5")
+theme_override_font_sizes/font_size = 64
+text = "游 戏 结 束"
+horizontal_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Lose"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -127.0
+offset_top = -84.0
+offset_right = 129.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = SubResource("AtlasTexture_wlc2l")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Lose/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_l6bg5")
+theme_override_font_sizes/font_size = 24
+text = "再来一次"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Win" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -238.0
+offset_top = -20.0
+offset_right = 236.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6adfg")
+
+[node name="Label" type="Label" parent="Win"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -207.0
+offset_top = 27.0
+offset_right = 213.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_l6bg5")
+theme_override_font_sizes/font_size = 64
+text = "成 功 通 关"
+horizontal_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Win"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -127.0
+offset_top = -84.0
+offset_right = 129.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = SubResource("AtlasTexture_wlc2l")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Win/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_l6bg5")
+theme_override_font_sizes/font_size = 24
+text = "再来一次"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Lose/TextureButton" to="Lose/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Win/TextureButton" to="Lose/TextureButton" method="_on_texture_button_pressed"]

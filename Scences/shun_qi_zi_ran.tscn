@@ -1,0 +1,693 @@
+[gd_scene load_steps=9 format=3 uid="uid://jltkwtpskqrl"]
+
+[ext_resource type="Texture2D" uid="uid://mx21fi75fvxy" path="res://Sprite/ShunQiZiRan/10.png" id="1_gkuu7"]
+[ext_resource type="Script" path="res://Script/shun_qi_zi_ran.gd" id="1_s01m0"]
+[ext_resource type="PackedScene" uid="uid://cku255ljrdcj3" path="res://Scences/timer.tscn" id="2_s6gjn"]
+[ext_resource type="Texture2D" uid="uid://cs4oyoy88u55e" path="res://Sprite/ShunQiZiRan/UI_Flat_FrameSlot02b.png" id="5_nklhq"]
+[ext_resource type="Texture2D" uid="uid://cqn026kgdeghm" path="res://Sprite/ShunQiZiRan/Carved_9Slides.png" id="6_6t6hj"]
+[ext_resource type="FontFile" uid="uid://c5ugy4bgmo7mu" path="res://Font/ThaleahFat.ttf" id="7_4b02v"]
+[ext_resource type="PackedScene" uid="uid://bgs4ryqa52mgk" path="res://Scences/backbutton.tscn" id="7_pkien"]
+[ext_resource type="PackedScene" uid="uid://bpji8grjpjpiw" path="res://Scences/end_image.tscn" id="8_s3c2q"]
+
+[node name="Shun_Qi_Zi_Ran" type="Node2D"]
+script = ExtResource("1_s01m0")
+
+[node name="BG" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="BG"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="BG/Control"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_gkuu7")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TimerLabel" parent="UI/UI" instance=ExtResource("2_s6gjn")]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 60.0
+offset_right = 128.0
+offset_bottom = 92.0
+
+[node name="GridContainer" type="GridContainer" parent="UI/UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -259.0
+offset_top = -507.0
+offset_right = 259.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(259, 214)
+columns = 6
+
+[node name="TextureButton" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton3" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton4" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton5" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton6" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton7" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton8" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton9" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton10" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton11" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton11"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton12" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton12"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton13" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton13"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton14" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton14"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton15" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton15"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton16" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton16"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton17" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton17"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton18" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton18"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton19" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton19"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton20" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton20"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton21" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton21"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton22" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton22"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton23" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton23"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton24" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton24"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton25" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton25"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton26" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton26"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton27" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton27"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton28" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton28"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton29" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton29"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton30" type="TextureButton" parent="UI/UI/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_nklhq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/GridContainer/TextureButton30"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="UI/UI"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -425.0
+offset_right = 260.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_6t6hj")
+
+[node name="Label" type="Label" parent="UI/UI/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 36.0
+offset_top = 32.0
+offset_right = -26.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_4b02v")
+theme_override_font_sizes/font_size = 48
+autowrap_mode = 3
+
+[node name="Backbutton" parent="UI" instance=ExtResource("7_pkien")]
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 34.0
+offset_bottom = 30.0
+
+[node name="EndImage" parent="." instance=ExtResource("8_s3c2q")]
+
+[node name="Lose" parent="EndImage" index="0"]
+offset_left = -237.0
+offset_top = -102.0
+offset_right = 237.0
+offset_bottom = 102.0
+
+[node name="Win" parent="EndImage" index="1"]
+offset_left = -237.0
+offset_top = -102.0
+offset_right = 237.0
+offset_bottom = 102.0
+
+[connection signal="pressed" from="EndImage/Lose/TextureButton" to="EndImage" method="_on_lose_button_pressed"]
+[connection signal="pressed" from="EndImage/Win/TextureButton" to="EndImage" method="_on_win_button_pressed"]
+
+[editable path="EndImage"]

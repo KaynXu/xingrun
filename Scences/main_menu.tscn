@@ -1,0 +1,305 @@
+[gd_scene load_steps=6 format=3 uid="uid://bssct8ot0fjt8"]
+
+[ext_resource type="Script" path="res://Script/main_menu.gd" id="1_1hhe7"]
+[ext_resource type="Texture2D" uid="uid://ds3a33c4uev7u" path="res://Sprite/MainMenu/6.png" id="1_unpjb"]
+[ext_resource type="Texture2D" uid="uid://bqo25xds6rlaw" path="res://icon.svg" id="3_gawtb"]
+[ext_resource type="Texture2D" uid="uid://baruassnaa4kl" path="res://Sprite/MainMenu/Button_Disable_3Slides.png" id="4_g8gi8"]
+[ext_resource type="FontFile" uid="uid://chnee2hx5p4sm" path="res://Font/shanhaihongruibangshuw.ttf" id="5_8hj3p"]
+
+[node name="MainMenu" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1hhe7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -599.0
+offset_right = 941.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_unpjb")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -139.0
+offset_bottom = 165.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 48
+
+[node name="First Row" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="LingBoWeiBu" type="TextureButton" parent="VBoxContainer/First Row"]
+y_sort_enabled = true
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("3_gawtb")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/First Row/LingBoWeiBu"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_g8gi8")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/First Row/LingBoWeiBu/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_8hj3p")
+theme_override_font_sizes/font_size = 24
+text = "凌波微步"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="YiYiDuiYing" type="TextureButton" parent="VBoxContainer/First Row"]
+y_sort_enabled = true
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("3_gawtb")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/First Row/YiYiDuiYing"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_g8gi8")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/First Row/YiYiDuiYing/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_8hj3p")
+theme_override_font_sizes/font_size = 24
+text = "一一对应"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShuyiShu" type="TextureButton" parent="VBoxContainer/First Row"]
+y_sort_enabled = true
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("3_gawtb")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/First Row/ShuyiShu"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_g8gi8")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/First Row/ShuyiShu/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_8hj3p")
+theme_override_font_sizes/font_size = 24
+text = "数一数"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PingFenQiuSe" type="TextureButton" parent="VBoxContainer/First Row"]
+y_sort_enabled = true
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("3_gawtb")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/First Row/PingFenQiuSe"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_g8gi8")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/First Row/PingFenQiuSe/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_8hj3p")
+theme_override_font_sizes/font_size = 24
+text = "平分秋色"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Second Row" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TaoYuanJieYi" type="TextureButton" parent="VBoxContainer/Second Row"]
+y_sort_enabled = true
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("3_gawtb")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Second Row/TaoYuanJieYi"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_g8gi8")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/Second Row/TaoYuanJieYi/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_8hj3p")
+theme_override_font_sizes/font_size = 24
+text = "桃园结义"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShunQiZiRan" type="TextureButton" parent="VBoxContainer/Second Row"]
+y_sort_enabled = true
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("3_gawtb")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Second Row/ShunQiZiRan"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_g8gi8")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/Second Row/ShunQiZiRan/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_8hj3p")
+theme_override_font_sizes/font_size = 24
+text = "顺其自然"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HeJiuBiFen" type="TextureButton" parent="VBoxContainer/Second Row"]
+y_sort_enabled = true
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("3_gawtb")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Second Row/HeJiuBiFen"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_g8gi8")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/Second Row/HeJiuBiFen/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_8hj3p")
+theme_override_font_sizes/font_size = 24
+text = "合久必分"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/First Row/LingBoWeiBu" to="." method="_on_ling_bo_wei_bu_pressed"]
+[connection signal="pressed" from="VBoxContainer/First Row/YiYiDuiYing" to="." method="_on_yi_yi_dui_ying_pressed"]
+[connection signal="pressed" from="VBoxContainer/First Row/ShuyiShu" to="." method="_on_shuyi_shu_pressed"]
+[connection signal="pressed" from="VBoxContainer/First Row/PingFenQiuSe" to="." method="_on_ping_fen_qiu_se_pressed"]
+[connection signal="pressed" from="VBoxContainer/Second Row/TaoYuanJieYi" to="." method="_on_tao_yuan_jie_yi_pressed"]
+[connection signal="pressed" from="VBoxContainer/Second Row/ShunQiZiRan" to="." method="_on_shun_qi_zi_ran_pressed"]
+[connection signal="pressed" from="VBoxContainer/Second Row/HeJiuBiFen" to="." method="_on_he_jiu_bi_fen_pressed"]

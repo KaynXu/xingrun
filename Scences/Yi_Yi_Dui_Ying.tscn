@@ -1,0 +1,301 @@
+[gd_scene load_steps=20 format=3 uid="uid://cpa2fmoq0sx5o"]
+
+[ext_resource type="PackedScene" uid="uid://cku255ljrdcj3" path="res://Scences/timer.tscn" id="1_7exuq"]
+[ext_resource type="Script" path="res://Script/Yi_Yi_Dui_Ying.gd" id="1_b8vso"]
+[ext_resource type="PackedScene" uid="uid://bgs4ryqa52mgk" path="res://Scences/backbutton.tscn" id="5_03j5k"]
+[ext_resource type="PackedScene" uid="uid://rrudykx7mr6p" path="res://Scences/round_counter.tscn" id="5_gyqvl"]
+[ext_resource type="Texture2D" uid="uid://bpsf54lv4bjju" path="res://Sprite/ShunQiZiRan/Border All 1.png" id="5_mul74"]
+[ext_resource type="Texture2D" uid="uid://ct62eo1ul32x4" path="res://Sprite/YiYiDuiYing/Food.png" id="6_5v7g0"]
+[ext_resource type="Texture2D" uid="uid://bnj6om75rywhr" path="res://Sprite/YiYiDuiYing/Clouds 1/1.png" id="7_fdx5y"]
+[ext_resource type="Texture2D" uid="uid://bmxirfnqcaslj" path="res://Sprite/YiYiDuiYing/Clouds 1/2.png" id="8_0b6a6"]
+[ext_resource type="PackedScene" uid="uid://bpji8grjpjpiw" path="res://Scences/end_image.tscn" id="9_fsc2f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e3k3"]
+atlas = ExtResource("6_5v7g0")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgra2"]
+atlas = ExtResource("6_5v7g0")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvn60"]
+atlas = ExtResource("6_5v7g0")
+region = Rect2(112, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqwxt"]
+atlas = ExtResource("6_5v7g0")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68i50"]
+atlas = ExtResource("6_5v7g0")
+region = Rect2(80, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pnbg"]
+atlas = ExtResource("6_5v7g0")
+region = Rect2(96, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmcvb"]
+atlas = ExtResource("6_5v7g0")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmvvc"]
+atlas = ExtResource("6_5v7g0")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5an0a"]
+atlas = ExtResource("5_mul74")
+region = Rect2(576, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pptpf"]
+
+[node name="Yi_Yi_Dui_Ying" type="Node2D"]
+script = ExtResource("1_b8vso")
+metadata/_edit_horizontal_guides_ = [-88.0]
+
+[node name="Foods" type="Node2D" parent="."]
+visible = false
+
+[node name="Apple" type="Sprite2D" parent="Foods"]
+texture = SubResource("AtlasTexture_3e3k3")
+
+[node name="Bacon" type="Sprite2D" parent="Foods"]
+texture = SubResource("AtlasTexture_fgra2")
+
+[node name="Shrimp" type="Sprite2D" parent="Foods"]
+texture = SubResource("AtlasTexture_lvn60")
+
+[node name="Strawbarry" type="Sprite2D" parent="Foods"]
+texture = SubResource("AtlasTexture_qqwxt")
+
+[node name="Cake" type="Sprite2D" parent="Foods"]
+texture = SubResource("AtlasTexture_68i50")
+
+[node name="DragonFruit" type="Sprite2D" parent="Foods"]
+texture = SubResource("AtlasTexture_2pnbg")
+
+[node name="Honey" type="Sprite2D" parent="Foods"]
+texture = SubResource("AtlasTexture_mmcvb")
+
+[node name="Eggs" type="Sprite2D" parent="Foods"]
+texture = SubResource("AtlasTexture_hmvvc")
+
+[node name="Background2" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Background2"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_fdx5y")
+
+[node name="TextureRect2" type="TextureRect" parent="Background2"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_0b6a6")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="control" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backbutton" parent="UI/control" instance=ExtResource("5_03j5k")]
+layout_mode = 1
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 24.0
+offset_bottom = 36.0
+
+[node name="TimerLabel" parent="UI/control" instance=ExtResource("1_7exuq")]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 44.0
+offset_right = 110.0
+offset_bottom = 76.0
+
+[node name="RoundCounter" parent="UI/control" instance=ExtResource("5_gyqvl")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -204.0
+offset_top = 60.0
+offset_right = -172.0
+offset_bottom = 68.0
+grow_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/control"]
+z_index = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -164.0
+offset_top = -162.0
+offset_right = 164.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(164, 64)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="TextureButton" type="TextureButton" parent="UI/control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_5an0a")
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/control/HBoxContainer/TextureButton"]
+position = Vector2(31, 32)
+
+[node name="TextureButton2" type="TextureButton" parent="UI/control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_5an0a")
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/control/HBoxContainer/TextureButton2"]
+position = Vector2(31, 32)
+
+[node name="TextureButton3" type="TextureButton" parent="UI/control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_5an0a")
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/control/HBoxContainer/TextureButton3"]
+position = Vector2(31, 32)
+
+[node name="GridContainer2" type="GridContainer" parent="UI/control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -160.0
+offset_top = 248.0
+offset_right = 160.0
+offset_bottom = 568.0
+grow_horizontal = 2
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(160, 160)
+columns = 3
+
+[node name="TextureRect" type="TextureRect" parent="UI/control/GridContainer2"]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = SubResource("AtlasTexture_pptpf")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="UI/control/GridContainer2"]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = SubResource("AtlasTexture_pptpf")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="UI/control/GridContainer2"]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = SubResource("AtlasTexture_pptpf")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="UI/control/GridContainer2"]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = SubResource("AtlasTexture_pptpf")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="UI/control/GridContainer2"]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = SubResource("AtlasTexture_pptpf")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="UI/control/GridContainer2"]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = SubResource("AtlasTexture_pptpf")
+expand_mode = 1
+
+[node name="TextureRect7" type="TextureRect" parent="UI/control/GridContainer2"]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = SubResource("AtlasTexture_pptpf")
+expand_mode = 1
+
+[node name="TextureRect8" type="TextureRect" parent="UI/control/GridContainer2"]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = SubResource("AtlasTexture_pptpf")
+expand_mode = 1
+
+[node name="TextureRect9" type="TextureRect" parent="UI/control/GridContainer2"]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = SubResource("AtlasTexture_pptpf")
+expand_mode = 1
+
+[node name="EndImage" parent="UI" instance=ExtResource("9_fsc2f")]
+layer = 2
+
+[node name="Lose" parent="UI/EndImage" index="0"]
+offset_left = -237.0
+offset_top = -102.0
+offset_right = 237.0
+offset_bottom = 102.0
+
+[node name="Win" parent="UI/EndImage" index="1"]
+offset_left = -237.0
+offset_top = -102.0
+offset_right = 237.0
+offset_bottom = 102.0
+
+[connection signal="pressed" from="UI/control/HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="UI/control/HBoxContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="UI/control/HBoxContainer/TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="UI/EndImage/Lose/TextureButton" to="." method="_on_lose_button_pressed"]
+[connection signal="pressed" from="UI/EndImage/Lose/TextureButton" to="UI/EndImage" method="_on_lose_button_pressed"]
+[connection signal="pressed" from="UI/EndImage/Win/TextureButton" to="." method="_on_win_button_pressed"]
+
+[editable path="UI/EndImage"]

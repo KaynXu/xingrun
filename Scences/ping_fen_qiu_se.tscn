@@ -1,0 +1,347 @@
+[gd_scene load_steps=13 format=3 uid="uid://bhmvbiee4l5qx"]
+
+[ext_resource type="PackedScene" uid="uid://cku255ljrdcj3" path="res://Scences/timer.tscn" id="1_0xfkj"]
+[ext_resource type="Script" path="res://Script/ping_fen_qiu_se.gd" id="1_6on5j"]
+[ext_resource type="PackedScene" uid="uid://rrudykx7mr6p" path="res://Scences/round_counter.tscn" id="1_q6put"]
+[ext_resource type="Texture2D" uid="uid://c5pe5no3o06er" path="res://Sprite/PingFenQiuSe/Piknik basket.png" id="1_xu8ml"]
+[ext_resource type="Texture2D" uid="uid://bnhtcmk8pteo8" path="res://Sprite/PingFenQiuSe/Buttonbackground.tres" id="2_y3njn"]
+[ext_resource type="Texture2D" uid="uid://ctmx1g78hwf6s" path="res://Sprite/PingFenQiuSe/Cabbage.tres" id="3_qyqnu"]
+[ext_resource type="Texture2D" uid="uid://b8ta3107dy80e" path="res://Sprite/LingBoWeiBu/UI_Flat_Banner03a.png" id="4_jyhbq"]
+[ext_resource type="FontFile" uid="uid://c5ugy4bgmo7mu" path="res://Font/ThaleahFat.ttf" id="5_tj4ml"]
+[ext_resource type="FontFile" uid="uid://ccmyoxpasiioa" path="res://Sprite/PingFenQiuSe/shanhaihongruibangshuw.ttf" id="9_3et28"]
+[ext_resource type="Texture2D" uid="uid://8d4br1b18gta" path="res://Sprite/PingFenQiuSe/Ruby.tres" id="9_tp4c7"]
+[ext_resource type="PackedScene" uid="uid://bgs4ryqa52mgk" path="res://Scences/backbutton.tscn" id="10_rsc5g"]
+[ext_resource type="PackedScene" uid="uid://bpji8grjpjpiw" path="res://Scences/end_image.tscn" id="11_ijw2n"]
+
+[node name="Ping_Fen_Qiu_Se" type="Node2D"]
+script = ExtResource("1_6on5j")
+
+[node name="Background" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.713012, 0.484112, 1)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="UI"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemButton" type="TextureButton" parent="UI/Control"]
+texture_filter = 1
+layout_mode = 2
+offset_left = 719.0
+offset_top = 111.0
+offset_right = 729.0
+offset_bottom = 121.0
+size_flags_vertical = 0
+texture_normal = ExtResource("2_y3njn")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="UI/Control/ItemButton"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_qyqnu")
+expand_mode = 1
+
+[node name="TimerLabel" parent="UI/Control" instance=ExtResource("1_0xfkj")]
+layout_mode = 1
+offset_left = 32.0
+offset_top = 40.0
+offset_right = 127.0
+offset_bottom = 72.0
+
+[node name="RoundCounter" parent="UI/Control" instance=ExtResource("1_q6put")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -206.0
+offset_top = 40.0
+offset_right = -174.0
+offset_bottom = 48.0
+grow_horizontal = 0
+
+[node name="3Buckets" type="HBoxContainer" parent="UI/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 238.0
+offset_top = -93.0
+offset_right = -238.0
+offset_bottom = -77.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(4, 4)
+pivot_offset = Vector2(32, 0)
+theme_override_constants/separation = 8
+
+[node name="baskect_3_1" type="TextureButton" parent="UI/Control/3Buckets"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture_normal = ExtResource("1_xu8ml")
+
+[node name="Label" type="Label" parent="UI/Control/3Buckets/baskect_3_1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_tj4ml")
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="baskect_3_2" type="TextureButton" parent="UI/Control/3Buckets"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_xu8ml")
+
+[node name="Label" type="Label" parent="UI/Control/3Buckets/baskect_3_2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_tj4ml")
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="baskect_3_3" type="TextureButton" parent="UI/Control/3Buckets"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_xu8ml")
+
+[node name="Label" type="Label" parent="UI/Control/3Buckets/baskect_3_3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_tj4ml")
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="UI/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.0
+offset_top = 262.0
+offset_right = -132.0
+offset_bottom = 328.0
+grow_horizontal = 2
+scale = Vector2(5, 5)
+columns = 7
+
+[node name="5Buckets" type="HBoxContainer" parent="UI/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 238.0
+offset_top = -93.0
+offset_right = -238.0
+offset_bottom = -77.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(4, 4)
+pivot_offset = Vector2(56, 0)
+theme_override_constants/separation = 8
+
+[node name="baskect_5_1" type="TextureButton" parent="UI/Control/5Buckets"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture_normal = ExtResource("1_xu8ml")
+
+[node name="Label" type="Label" parent="UI/Control/5Buckets/baskect_5_1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_tj4ml")
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="baskect_5_2" type="TextureButton" parent="UI/Control/5Buckets"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_xu8ml")
+
+[node name="Label" type="Label" parent="UI/Control/5Buckets/baskect_5_2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_tj4ml")
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="baskect_5_3" type="TextureButton" parent="UI/Control/5Buckets"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_xu8ml")
+
+[node name="Label" type="Label" parent="UI/Control/5Buckets/baskect_5_3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_tj4ml")
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="baskect_5_4" type="TextureButton" parent="UI/Control/5Buckets"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_xu8ml")
+
+[node name="Label" type="Label" parent="UI/Control/5Buckets/baskect_5_4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_tj4ml")
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="baskect_5_5" type="TextureButton" parent="UI/Control/5Buckets"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_xu8ml")
+
+[node name="Label" type="Label" parent="UI/Control/5Buckets/baskect_5_5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_tj4ml")
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GamePlayTutorial" type="TextureRect" parent="UI"]
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -238.0
+offset_top = 104.0
+offset_right = 238.0
+offset_bottom = 226.0
+grow_horizontal = 2
+texture = ExtResource("4_jyhbq")
+
+[node name="Label" type="Label" parent="UI/GamePlayTutorial"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 7.0
+offset_right = -8.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_3et28")
+theme_override_font_sizes/font_size = 23
+text = "点击水果，再点击下方箱子，即可收入箱中。
+双击箱子，即可将箱中水果放回。
+将所有水果平均分即可过关"
+text_overrun_behavior = 1
+
+[node name="Backbutton" parent="UI" instance=ExtResource("10_rsc5g")]
+offset_left = 17.0
+offset_top = 17.0
+offset_right = 33.0
+offset_bottom = 29.0
+
+[node name="Images" type="CanvasLayer" parent="."]
+
+[node name="Container" type="Container" parent="Images"]
+offset_left = -956.0
+offset_right = -916.0
+offset_bottom = 40.0
+
+[node name="Carrot" type="Sprite2D" parent="Images/Container"]
+scale = Vector2(2, 2)
+texture = ExtResource("9_tp4c7")
+
+[node name="DoubleClicker" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="EndImage" parent="." instance=ExtResource("11_ijw2n")]
+
+[connection signal="pressed" from="UI/Control/ItemButton" to="." method="_on_item_button_pressed"]
+[connection signal="pressed" from="UI/Control/3Buckets/baskect_3_1" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="UI/Control/3Buckets/baskect_3_2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="focus_entered" from="UI/Control/3Buckets/baskect_3_3" to="." method="_on_baskect_3_3_focus_entered"]
+[connection signal="pressed" from="UI/Control/3Buckets/baskect_3_3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="timeout" from="DoubleClicker" to="." method="_on_double_clicker_timeout"]
+[connection signal="pressed" from="EndImage/Lose/TextureButton" to="." method="_on_lose_restart_button_pressed"]
+[connection signal="pressed" from="EndImage/Win/TextureButton" to="." method="_on_win_restart_button_pressed"]
+
+[editable path="EndImage"]

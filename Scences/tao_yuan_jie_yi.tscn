@@ -1,0 +1,230 @@
+[gd_scene load_steps=5 format=3 uid="uid://7a5a5jmugkuh"]
+
+[ext_resource type="FontFile" uid="uid://c5ugy4bgmo7mu" path="res://Font/ThaleahFat.ttf" id="1_1sqig"]
+[ext_resource type="Script" path="res://Script/tao_yuan_jie_yi.gd" id="1_pbc3l"]
+[ext_resource type="PackedScene" uid="uid://cku255ljrdcj3" path="res://Scences/timer.tscn" id="2_iaqea"]
+[ext_resource type="PackedScene" uid="uid://bgs4ryqa52mgk" path="res://Scences/backbutton.tscn" id="3_xptsi"]
+
+[node name="Tao_Yuan_Jie_Yi" type="Node2D"]
+script = ExtResource("1_pbc3l")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.89, 0.8544, 0.4628, 1)
+
+[node name="TimerLabel" parent="UI" instance=ExtResource("2_iaqea")]
+offset_left = 48.0
+offset_top = 48.0
+offset_right = 144.0
+offset_bottom = 80.0
+
+[node name="ColorRect2" type="ColorRect" parent="UI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -350.0
+offset_right = 250.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.745098, 0.768627, 1, 1)
+
+[node name="GridContainer" type="GridContainer" parent="UI/ColorRect2"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 4
+columns = 5
+
+[node name="Backbutton" parent="UI" instance=ExtResource("3_xptsi")]
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 34.0
+offset_bottom = 30.0
+
+[node name="Numbers" type="CanvasLayer" parent="."]
+
+[node name="1" type="ColorRect" parent="Numbers"]
+offset_left = -992.0
+offset_right = -896.0
+offset_bottom = 96.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.541176, 1, 0.490196, 1)
+
+[node name="Button" type="Button" parent="Numbers/1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1sqig")
+theme_override_font_sizes/font_size = 96
+text = "1"
+
+[node name="2" type="ColorRect" parent="Numbers"]
+offset_left = -896.0
+offset_right = -800.0
+offset_bottom = 96.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.976471, 0.823529, 0.898039, 1)
+
+[node name="Button" type="Button" parent="Numbers/2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1sqig")
+theme_override_font_sizes/font_size = 96
+text = "2"
+
+[node name="3" type="ColorRect" parent="Numbers"]
+offset_left = -800.0
+offset_right = -704.0
+offset_bottom = 96.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.345098, 0.980392, 0.968627, 1)
+
+[node name="Button" type="Button" parent="Numbers/3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1sqig")
+theme_override_font_sizes/font_size = 96
+text = "3"
+
+[node name="4" type="ColorRect" parent="Numbers"]
+offset_left = -704.0
+offset_right = -608.0
+offset_bottom = 96.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.980392, 0.321569, 0.639216, 1)
+
+[node name="Button" type="Button" parent="Numbers/4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1sqig")
+theme_override_font_sizes/font_size = 96
+text = "4"
+
+[node name="5" type="ColorRect" parent="Numbers"]
+offset_left = -608.0
+offset_right = -512.0
+offset_bottom = 96.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.960784, 0.890196, 0, 1)
+
+[node name="Button" type="Button" parent="Numbers/5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1sqig")
+theme_override_font_sizes/font_size = 96
+text = "5"
+
+[node name="6" type="ColorRect" parent="Numbers"]
+offset_left = -512.0
+offset_right = -416.0
+offset_bottom = 96.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.756863, 0.509804, 0.929412, 1)
+
+[node name="Button" type="Button" parent="Numbers/6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1sqig")
+theme_override_font_sizes/font_size = 96
+text = "6"
+
+[node name="7" type="ColorRect" parent="Numbers"]
+offset_left = -416.0
+offset_right = -320.0
+offset_bottom = 96.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.14902, 0.419608, 1, 1)
+
+[node name="Button" type="Button" parent="Numbers/7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1sqig")
+theme_override_font_sizes/font_size = 96
+text = "7"
+
+[node name="8" type="ColorRect" parent="Numbers"]
+offset_left = -320.0
+offset_right = -224.0
+offset_bottom = 96.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.921569, 0.27451, 0.392157, 1)
+
+[node name="Button" type="Button" parent="Numbers/8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1sqig")
+theme_override_font_sizes/font_size = 96
+text = "8"
+
+[node name="9" type="ColorRect" parent="Numbers"]
+offset_left = -224.0
+offset_right = -128.0
+offset_bottom = 96.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 0.615686, 0.490196, 1)
+
+[node name="Button" type="Button" parent="Numbers/9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1sqig")
+theme_override_font_sizes/font_size = 96
+text = "9"
