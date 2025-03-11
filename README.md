@@ -1,7 +1,7 @@
 For Educational purpose only.
 仅用于教学目的。
 
-Develop for my best tutor Aoxing Hua and a branch of lovely teachers from StarRain.
+Develop for my best tutor Aoxing Hua and a batch of lovely teachers from StarRain.
 为华老师和星润最可爱的同事们开发。
 
     THE GAME: PLAY ON Itch:https://kayn0423.itch.io/starrain
@@ -10,7 +10,7 @@ Develop for my best tutor Aoxing Hua and a branch of lovely teachers from StarRa
     
 ## Overview 小游戏介绍
 
-LingBoWeiBu 凌波微步
+### LingBoWeiBu 凌波微步
 一款基于青蛙跳荷叶的数学游戏。玩家需要观察青蛙跳跃的步数，并选择正确的除数。
 
 游戏规则:
@@ -29,7 +29,7 @@ LingBoWeiBu 凌波微步
 - 需要快速的观察和计算能力
 - 培养数学思维和判断能力
 
-YiYiDuiYing 一一对应
+### YiYiDuiYing 一一对应
 一款基于数字与图形对应关系的数学游戏。玩家需要数出图形的数量,并选择对应的数字。
 
 游戏规则:
@@ -46,7 +46,7 @@ YiYiDuiYing 一一对应
 - 锻炼注意力和观察力
 - 总共9个关卡,难度逐步提升
 
-ShuYiShu 数一数
+### ShuYiShu 数一数
 一款基于数字与骰子图案对应关系的数学游戏。玩家需要快速识别骰子点数,并选择正确的骰子图案。
 
 游戏规则:
@@ -64,7 +64,7 @@ ShuYiShu 数一数
 - 总共10个关卡,难度逐步提升
 - 每一关都需要连续正确选择3次才能过关
 
-PingFenQiuSe 平分秋色
+### PingFenQiuSe 平分秋色
 一款基于平均分配的数学游戏。玩家需要将水果平均分配到不同的箱子中。
 
 游戏规则:
@@ -84,7 +84,7 @@ PingFenQiuSe 平分秋色
 - 总共6个关卡,难度逐步提升
 - 每一关都需要完全平均分配才能过关
 
-TaoYuanJieYi 桃园结义
+### TaoYuanJieYi 桃园结义
 一款基于数字消除的益智游戏。玩家需要通过改变数字来消除相同数字。
 
 游戏规则:
@@ -110,7 +110,7 @@ TaoYuanJieYi 桃园结义
 - 总共需要完成30轮消除
 - 每一轮都需要谨慎使用3步操作机会
 
-ShunQiZiRan 顺其自然
+### ShunQiZiRan 顺其自然
 一款基于数字顺序的益智游戏。玩家需要按照数字顺序依次点击数字。
 
 游戏规则:
@@ -129,7 +129,7 @@ ShunQiZiRan 顺其自然
 - 总共需要完成60个数字的点击
 - 每次都需要保持高度专注
 
-HeJiuBiFen 合久必分
+### HeJiuBiFen 合久必分
 一款基于数字分解的益智游戏。玩家需要通过分解数字来获得质数。
 
 游戏规则:
