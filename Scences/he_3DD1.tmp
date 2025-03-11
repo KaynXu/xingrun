@@ -1,0 +1,569 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxwykqjmgkqid"]
+
+[ext_resource type="Script" path="res://Script/he_jiu_bi_fen.gd" id="1_n5iog"]
+[ext_resource type="FontFile" uid="uid://c5ugy4bgmo7mu" path="res://Font/ThaleahFat.ttf" id="1_pb2cc"]
+
+[node name="He_Jiu_Bi_Fen" type="Node2D"]
+script = ExtResource("1_n5iog")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="YellowBackground" type="ColorRect" parent="UI/UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.910305, 0.884708, 0.502653, 1)
+
+[node name="GridContainer" type="GridContainer" parent="UI/UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -560.0
+offset_right = 200.0
+offset_bottom = -292.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 2
+
+[node name="Blocks" type="CanvasLayer" parent="."]
+
+[node name="21" type="ColorRect" parent="Blocks"]
+offset_left = 356.0
+offset_right = 544.0
+offset_bottom = 188.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/21"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "21"
+flat = true
+
+[node name="3" type="ColorRect" parent="Blocks"]
+offset_left = 728.0
+offset_right = 916.0
+offset_bottom = 188.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "3"
+flat = true
+
+[node name="7" type="ColorRect" parent="Blocks"]
+offset_left = 916.0
+offset_right = 1104.0
+offset_bottom = 188.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "7"
+flat = true
+
+[node name="63" type="ColorRect" parent="Blocks"]
+offset_left = 1104.0
+offset_right = 1292.0
+offset_bottom = 188.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/63"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "63"
+flat = true
+
+[node name="24" type="ColorRect" parent="Blocks"]
+offset_left = 540.0
+offset_top = 188.0
+offset_right = 728.0
+offset_bottom = 376.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/24"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "24"
+flat = true
+
+[node name="4" type="ColorRect" parent="Blocks"]
+offset_left = 728.0
+offset_top = 188.0
+offset_right = 916.0
+offset_bottom = 376.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "4"
+flat = true
+
+[node name="6" type="ColorRect" parent="Blocks"]
+offset_left = 916.0
+offset_top = 188.0
+offset_right = 1104.0
+offset_bottom = 376.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "6"
+flat = true
+
+[node name="2" type="ColorRect" parent="Blocks"]
+offset_left = 1104.0
+offset_top = 188.0
+offset_right = 1292.0
+offset_bottom = 376.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "2"
+flat = true
+
+[node name="44" type="ColorRect" parent="Blocks"]
+offset_left = 540.0
+offset_top = 376.0
+offset_right = 728.0
+offset_bottom = 564.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/44"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "44"
+flat = true
+
+[node name="12" type="ColorRect" parent="Blocks"]
+offset_left = 728.0
+offset_top = 376.0
+offset_right = 916.0
+offset_bottom = 564.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/12"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "11"
+flat = true
+
+[node name="78" type="ColorRect" parent="Blocks"]
+offset_left = 916.0
+offset_top = 376.0
+offset_right = 1104.0
+offset_bottom = 564.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/78"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "78"
+flat = true
+
+[node name="13" type="ColorRect" parent="Blocks"]
+offset_left = 1104.0
+offset_top = 376.0
+offset_right = 1292.0
+offset_bottom = 564.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/13"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "13"
+flat = true
+
+[node name="49" type="ColorRect" parent="Blocks"]
+offset_left = 540.0
+offset_top = 564.0
+offset_right = 728.0
+offset_bottom = 752.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/49"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "49"
+flat = true
+
+[node name="8" type="ColorRect" parent="Blocks"]
+offset_left = 728.0
+offset_top = 564.0
+offset_right = 916.0
+offset_bottom = 752.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "8"
+flat = true
+
+[node name="16" type="ColorRect" parent="Blocks"]
+offset_left = 916.0
+offset_top = 564.0
+offset_right = 1104.0
+offset_bottom = 752.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/16"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "12"
+flat = true
+
+[node name="80" type="ColorRect" parent="Blocks"]
+offset_left = 1104.0
+offset_top = 564.0
+offset_right = 1292.0
+offset_bottom = 752.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/80"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "80"
+flat = true
+
+[node name="10" type="ColorRect" parent="Blocks"]
+offset_left = 540.0
+offset_top = 752.0
+offset_right = 728.0
+offset_bottom = 940.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "10"
+flat = true
+
+[node name="5" type="ColorRect" parent="Blocks"]
+offset_left = 728.0
+offset_top = 752.0
+offset_right = 916.0
+offset_bottom = 940.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "5"
+flat = true
+
+[node name="40" type="ColorRect" parent="Blocks"]
+offset_left = 916.0
+offset_top = 752.0
+offset_right = 1104.0
+offset_bottom = 940.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/40"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "40"
+flat = true
+
+[node name="62" type="ColorRect" parent="Blocks"]
+offset_left = 1104.0
+offset_top = 752.0
+offset_right = 1292.0
+offset_bottom = 940.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/62"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "62"
+flat = true
+
+[node name="81" type="ColorRect" parent="Blocks"]
+offset_left = 540.0
+offset_top = 940.0
+offset_right = 728.0
+offset_bottom = 1128.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/81"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "81"
+flat = true
+
+[node name="9" type="ColorRect" parent="Blocks"]
+offset_left = 728.0
+offset_top = 940.0
+offset_right = 916.0
+offset_bottom = 1128.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "9"
+flat = true
+
+[node name="35" type="ColorRect" parent="Blocks"]
+offset_left = 916.0
+offset_top = 940.0
+offset_right = 1104.0
+offset_bottom = 1128.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/35"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "35"
+flat = true
+
+[node name="56" type="ColorRect" parent="Blocks"]
+offset_left = 1104.0
+offset_top = 940.0
+offset_right = 1292.0
+offset_bottom = 1128.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0.862745)
+
+[node name="Button" type="Button" parent="Blocks/56"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 128
+text = "56"
+flat = true
