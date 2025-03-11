@@ -50,19 +50,28 @@ func number_bubble():
 	new_button.pressed.connect(decompose.bind(new_block,new_number))
 
 func _process(delta: float) -> void:
+	$UI/UI/TextureRect/Label.text = "%.1f" % $AnswerTimer.time_left
+	if $UI/UI/RoundCounter.current_round == 10:
+		$AnswerTimer.stop()
+		$UI/UI/EndImage.show_win()
 	if is_all_prime():
 		for child in $UI/UI/GridContainer.get_children():
 			child.queue_free()
 		number_bubble()
 		number_bubble()
+		$AnswerTimer.start()
+		$UI/UI/RoundCounter.update()
 
 func _ready() -> void:
+	$UI/UI/RoundCounter.clear()
 	for block in blocks.values():
 		var button = block.get_node("Button")
 		var number = int(button.text)
 		button.pressed.connect(decompose.bind(block,number))
 	number_bubble()
 	number_bubble()
+	$AnswerTimer.start()
+	$UI/UI/RoundCounter.set_round(10)
 	
 func decompose(block:ColorRect,number:int):
 	var factor = []
@@ -112,3 +121,15 @@ func is_all_prime() -> bool:
 			return false
 	return true
 		
+
+func _on_answer_timer_timeout() -> void:
+	$UI/UI/EndImage.show_lose()
+
+
+func _on_WinLose_button_pressed() -> void:
+	for child in $UI/UI/GridContainer.get_children():
+			child.queue_free()
+	$UI/UI/EndImage/Lose.visible = false
+	$UI/UI/EndImage/Win.visible = false
+	_ready()
+	$AnswerTimer.start()

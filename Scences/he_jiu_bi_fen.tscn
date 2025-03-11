@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxwykqjmgkqid"]
+[gd_scene load_steps=8 format=3 uid="uid://bxwykqjmgkqid"]
 
 [ext_resource type="Script" path="res://Script/he_jiu_bi_fen.gd" id="1_n5iog"]
 [ext_resource type="FontFile" uid="uid://c5ugy4bgmo7mu" path="res://Font/ThaleahFat.ttf" id="1_pb2cc"]
+[ext_resource type="PackedScene" uid="uid://rrudykx7mr6p" path="res://Scences/round_counter.tscn" id="2_23j6u"]
+[ext_resource type="Texture2D" uid="uid://o4wsuwkqoib8" path="res://Sprite/HeJiuBiFen/UI_Flat_Banner02a.png" id="2_colt2"]
+[ext_resource type="PackedScene" uid="uid://bpji8grjpjpiw" path="res://Scences/end_image.tscn" id="4_yccx4"]
+[ext_resource type="Texture2D" uid="uid://b8ta3107dy80e" path="res://Sprite/LingBoWeiBu/UI_Flat_Banner03a.png" id="6_plcqc"]
+[ext_resource type="FontFile" uid="uid://ccmyoxpasiioa" path="res://Sprite/PingFenQiuSe/shanhaihongruibangshuw.ttf" id="7_5jali"]
 
 [node name="He_Jiu_Bi_Fen" type="Node2D"]
 script = ExtResource("1_n5iog")
@@ -35,12 +40,92 @@ anchor_bottom = 1.0
 offset_left = -200.0
 offset_top = -657.0
 offset_right = 200.0
-offset_bottom = -389.0
+offset_bottom = -230.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/h_separation = 8
 theme_override_constants/v_separation = 8
 columns = 2
+
+[node name="RoundCounter" parent="UI/UI" instance=ExtResource("2_23j6u")]
+layout_mode = 1
+offset_left = 33.0
+offset_top = 75.0
+offset_right = 65.0
+offset_bottom = 83.0
+
+[node name="TextureRect" type="TextureRect" parent="UI/UI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -181.0
+offset_top = 63.0
+offset_right = -23.0
+offset_bottom = 119.0
+grow_horizontal = 0
+texture = ExtResource("2_colt2")
+
+[node name="Label" type="Label" parent="UI/UI/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pb2cc")
+theme_override_font_sizes/font_size = 56
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EndImage" parent="UI/UI" instance=ExtResource("4_yccx4")]
+
+[node name="Lose" parent="UI/UI/EndImage" index="0"]
+offset_left = -237.0
+offset_top = -102.0
+offset_right = 237.0
+offset_bottom = 102.0
+
+[node name="Win" parent="UI/UI/EndImage" index="1"]
+offset_left = -237.0
+offset_top = -102.0
+offset_right = 237.0
+offset_bottom = 102.0
+
+[node name="GamePlayTutorial" type="TextureRect" parent="UI/UI"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -238.0
+offset_top = 162.0
+offset_right = 238.0
+offset_bottom = 284.0
+grow_horizontal = 2
+texture = ExtResource("6_plcqc")
+
+[node name="Label" type="Label" parent="UI/UI/GamePlayTutorial"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 7.0
+offset_right = -8.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_5jali")
+theme_override_font_sizes/font_size = 23
+text = "点击非质数可以将其分解为两个因数
+当所有数字都是质数时,会重新生成两个新数字
+需要不断分解直到全部变为质数"
+text_overrun_behavior = 1
 
 [node name="Blocks" type="CanvasLayer" parent="."]
 
@@ -743,3 +828,13 @@ theme_override_fonts/font = ExtResource("1_pb2cc")
 theme_override_font_sizes/font_size = 128
 text = "27"
 flat = true
+
+[node name="AnswerTimer" type="Timer" parent="."]
+wait_time = 7.0
+one_shot = true
+
+[connection signal="pressed" from="UI/UI/EndImage/Lose/TextureButton" to="." method="_on_WinLose_button_pressed"]
+[connection signal="pressed" from="UI/UI/EndImage/Win/TextureButton" to="." method="_on_WinLose_button_pressed"]
+[connection signal="timeout" from="AnswerTimer" to="." method="_on_answer_timer_timeout"]
+
+[editable path="UI/UI/EndImage"]
