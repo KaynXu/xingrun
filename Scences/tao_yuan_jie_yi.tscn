@@ -1,9 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://7a5a5jmugkuh"]
+[gd_scene load_steps=10 format=3 uid="uid://7a5a5jmugkuh"]
 
 [ext_resource type="FontFile" uid="uid://c5ugy4bgmo7mu" path="res://Font/ThaleahFat.ttf" id="1_1sqig"]
 [ext_resource type="Script" path="res://Script/tao_yuan_jie_yi.gd" id="1_pbc3l"]
 [ext_resource type="PackedScene" uid="uid://cku255ljrdcj3" path="res://Scences/timer.tscn" id="2_iaqea"]
 [ext_resource type="PackedScene" uid="uid://bgs4ryqa52mgk" path="res://Scences/backbutton.tscn" id="3_xptsi"]
+[ext_resource type="Texture2D" uid="uid://do7o33we678ym" path="res://Sprite/TaoYuanJieYi/04.png" id="4_5mp24"]
+[ext_resource type="PackedScene" uid="uid://bpji8grjpjpiw" path="res://Scences/end_image.tscn" id="6_jbb7a"]
+[ext_resource type="FontFile" uid="uid://chnee2hx5p4sm" path="res://Font/shanhaihongruibangshuw.ttf" id="7_n6xn5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gi2iu"]
+atlas = ExtResource("4_5mp24")
+region = Rect2(3, 67, 42, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vll52"]
+atlas = ExtResource("4_5mp24")
+region = Rect2(55, 118, 34, 5)
 
 [node name="Tao_Yuan_Jie_Yi" type="Node2D"]
 script = ExtResource("1_pbc3l")
@@ -14,6 +25,8 @@ script = ExtResource("1_pbc3l")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -22.0
+offset_bottom = -22.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.89, 0.8544, 0.4628, 1)
@@ -55,6 +68,62 @@ offset_left = 18.0
 offset_top = 18.0
 offset_right = 34.0
 offset_bottom = 30.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="UI"]
+texture_filter = 1
+offset_left = 306.0
+offset_top = 61.0
+offset_right = 348.0
+offset_bottom = 72.0
+scale = Vector2(5, 5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 30.0
+texture_under = SubResource("AtlasTexture_gi2iu")
+texture_progress = SubResource("AtlasTexture_vll52")
+texture_progress_offset = Vector2(4, 3)
+
+[node name="Label" type="Label" parent="UI/TextureProgressBar"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(21, 8)
+theme_override_fonts/font = ExtResource("1_1sqig")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="EndImage" parent="UI" instance=ExtResource("6_jbb7a")]
+
+[node name="Label2" type="Label" parent="UI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 34.0
+offset_top = 172.0
+offset_right = 50.0
+offset_bottom = 205.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("7_n6xn5")
+theme_override_font_sizes/font_size = 32
+text = "3"
+
+[node name="Label" type="Label" parent="UI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -81.0
+offset_top = 172.0
+offset_right = 47.0
+offset_bottom = 205.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("7_n6xn5")
+theme_override_font_sizes/font_size = 32
+text = "剩余步："
 
 [node name="Numbers" type="CanvasLayer" parent="."]
 
@@ -228,3 +297,9 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_1sqig")
 theme_override_font_sizes/font_size = 96
 text = "9"
+
+[connection signal="pressed" from="UI/EndImage/Lose/TextureButton" to="." method="on_losing_pressed"]
+[connection signal="pressed" from="UI/EndImage/Lose/TextureButton" to="UI/EndImage" method="_on_lose_button_pressed"]
+[connection signal="pressed" from="UI/EndImage/Win/TextureButton" to="UI/EndImage" method="_on_win_button_pressed"]
+
+[editable path="UI/EndImage"]

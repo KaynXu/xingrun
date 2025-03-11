@@ -17,6 +17,9 @@ const ROWS = 7
 const COLS = 5
 var grid = []
 var selected = null
+var current_round = 0
+var total_rounds = 30
+var steps = 3
 
 func _ready():
 	initialize_grid()
@@ -79,6 +82,7 @@ func setup_tiles():
 			grid_container.add_child(tile)
 
 func _on_tile_pressed(tile, x, y):
+	steps -= 1
 	var current_value = grid[y][x]
 	
 	# 根据当前数字进行加减
@@ -208,6 +212,8 @@ func check_and_process_matches():
 		if has_matches:
 			refill_grid()
 			update_visual_tiles()  # 确保每次填充后更新显示
+			current_round += 1
+			steps = 3
 			await get_tree().create_timer(0.3).timeout  # 添加短暂延迟使动画更流畅
 
 func process_matches():
@@ -245,3 +251,24 @@ func update_visual_tiles():
 	for child in grid_container.get_children():
 		child.queue_free()
 	setup_tiles()
+
+func _process(delta: float) -> void:
+	$UI/TextureProgressBar/Label.text = "%d/%d" % [current_round, total_rounds]
+	$UI/Label2.text = str(steps)
+	if steps == 0:
+		$UI/EndImage.show_lose()
+	$UI/TextureProgressBar.value = current_round
+
+func on_losing_pressed():
+	setup_tiles()
+	steps = 3
+	current_round = 0
+	
+func on_winning_pressed():
+	setup_tiles()
+	steps = 3
+	current_round = 0
+
+
+func _on_texture_button_pressed() -> void:
+	pass # Replace with function body.
